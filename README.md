@@ -22,7 +22,6 @@ Selenium example files
 20. prompt.py
 21. radio_checkbox.py
 22. setup_demo.py
-23. venv
 24. wait_implicit.py
 25. wait_sleep.py
 26. wait_wait_until.py
