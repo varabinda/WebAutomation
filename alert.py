@@ -1,3 +1,27 @@
+"""
+This script automates interaction with the alerts demo page on https://demoqa.com/alerts using Selenium.
+
+It performs the following steps:
+1. Navigates to the specified URL.
+2. Maximizes the browser window.
+3. Verifies that the page title is 'Alerts'.
+4. Clicks a button to trigger a JavaScript alert.
+5. Reads the text from the alert.
+6. Accepts (closes) the alert.
+7. Waits for 25 seconds.
+8. Closes the browser.
+
+Dependencies:
+- selenium: To install, run `pip install selenium`
+- Chrome WebDriver: Ensure the Chrome WebDriver executable is in your PATH or specify its location.
+
+Usage:
+    python script_name.py
+
+Author: Arabinda Verma
+Date: 2024-05-26
+"""
+
 import time
 
 from selenium import webdriver
