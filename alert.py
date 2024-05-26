@@ -16,10 +16,7 @@ Dependencies:
 - Chrome WebDriver: Ensure the Chrome WebDriver executable is in your PATH or specify its location.
 
 Usage:
-    python script_name.py
-
-Author: Arabinda Verma
-Date: 2024-05-26
+    python alert.py
 """
 
 import time

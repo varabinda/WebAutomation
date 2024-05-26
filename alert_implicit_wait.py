@@ -1,4 +1,23 @@
-import time
+"""
+This script automates interaction with the alerts demo page on https://demoqa.com/alerts using Selenium.
+
+It performs the following steps:
+1. Navigates to the specified URL.
+2. Maximizes the browser window.
+3. Verifies that the page title is 'Alerts'.
+4. Scrolls to and clicks a button that triggers a timed JavaScript alert.
+5. Waits for the alert to appear.
+6. Reads the text from the alert.
+7. Accepts (closes) the alert.
+8. Closes the browser.
+
+Dependencies:
+- selenium: To install, run `pip install selenium`
+- Chrome WebDriver: Ensure the Chrome WebDriver executable is in your PATH or specify its location.
+
+Usage:
+    python alert_implicit_wait.py
+"""
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
