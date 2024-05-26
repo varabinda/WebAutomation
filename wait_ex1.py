@@ -1,0 +1,56 @@
+from selenium import webdriver as wd
+from selenium.webdriver.common.by import By
+
+import time as delay
+
+from time import time
+
+URL = "https://rahulshettyacademy.com/seleniumPractise/"
+
+driver = wd.Chrome()
+driver.maximize_window()
+driver.get(URL)
+
+start = int(time() * 1000)
+
+search_box = driver.find_element(By.CSS_SELECTOR, ".search-keyword")
+search_box.send_keys("be")
+
+delay.sleep(2)
+
+product_list = driver.find_elements(By.XPATH, "//div[@class='product']")
+assert len(product_list) > 0, "No product found"
+
+for product in product_list:
+    product_name = product.find_element(By.XPATH, "h4").text
+    product_price = product.find_element(By.XPATH, "p").text
+    print(product_name, product_price)
+    product.find_element(By.XPATH, "div[3]").click()
+
+delay.sleep(2)
+
+cart_button = driver.find_element(By.XPATH, "//img[@alt='Cart']")
+cart_button.click()
+
+p2c_button = driver.find_element(By.XPATH, "//div[@class='action-block']/button[text()='PROCEED TO CHECKOUT']")
+p2c_button.click()
+
+delay.sleep(5)
+
+promo_textbox = driver.find_element(By.CSS_SELECTOR, '.promoCode')
+promo_textbox.send_keys('rahulshettyacademy')
+
+apply_button = driver.find_element(By.CSS_SELECTOR, ".promoBtn")
+apply_button.click()
+
+delay.sleep(8)
+
+promo_text = driver.find_element(By.CSS_SELECTOR, ".promoInfo")
+assert promo_text.text == "Code applied ..!", "Promo not applied"
+
+end = int(time() * 1000)
+print(f"TIme taken by the script to run {end - start} ms")
+
+delay.sleep(10)
+
+
