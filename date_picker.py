@@ -1,3 +1,23 @@
+"""
+This script automates interaction with the automation practice form page on https://demoqa.com/automation-practice-form using Selenium.
+
+It performs the following steps:
+1. Navigates to the specified URL.
+2. Maximizes the browser window.
+3. Checks if the page title is 'Practice Form'.
+4. Selects a date of birth (30th November 1995) using dropdowns for year and month, and a clickable day.
+5. Verifies that the selected date is correctly set.
+6. Waits for 10 seconds to observe the result.
+7. Closes the browser.
+
+Dependencies:
+- selenium: To install, run `pip install selenium`
+- Chrome WebDriver: Ensure the Chrome WebDriver executable is in your PATH or specify its location.
+
+Usage:
+    python date_picker.py
+"""
+
 import sys
 import time
 
