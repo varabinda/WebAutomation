@@ -1,5 +1,7 @@
 import time
 
+#this change is a class example
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
